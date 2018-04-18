@@ -1,4 +1,4 @@
-package handler
+package hello
 
 import (
 	"github.com/labstack/echo"
@@ -6,7 +6,8 @@ import (
 )
 
 func MainPage() echo.HandlerFunc {
-	return func(c echo.Context) error {     //cがコンテキストで、Request, Responseを色々する
+	return func(c echo.Context) error {
+		//cがコンテキストで、Request, Responseを色々できる
 		return c.String(http.StatusOK, "Hello World")
 	}
 }
